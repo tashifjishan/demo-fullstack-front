@@ -53,7 +53,7 @@ const TodoApp = () => {
     if (response.ok) {
       const tasks = await response.json();
       console.log(tasks.data)
-      setTodos(tasks.data.todoList);
+      setTodos(tasks.message.todoList);
     } else {
       alert("Failed to fetch tasks.");
     }
